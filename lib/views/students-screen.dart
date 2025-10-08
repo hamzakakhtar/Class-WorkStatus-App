@@ -72,7 +72,7 @@ class StudentsScreen extends StatelessWidget {
                           child: Container(
                             height: 50,
                             width: double.infinity,
-                            child: Row(
+                            child: Obx(()=>Row(
                               children: [
                                 SizedBox(width: 10,),
                                 Expanded(child: Text(name,style: TextStyle(fontSize: 20,color: Colors.blue),)),
@@ -86,7 +86,7 @@ class StudentsScreen extends StatelessWidget {
                                   studentController.incomplete(id);
                                 }, icon:Icon(Icons.close,color: Colors.red,),)
                               ],
-                            ),
+                            ),)
                           ),
                         );
                       }
